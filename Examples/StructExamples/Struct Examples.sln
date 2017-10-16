@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Struct Examples", "Struct Examples\Struct Examples.vcproj", "{C8E5A31A-9B14-4453-9482-CFB7A831A593}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Multi-File struct example", "Multi-File struct example\Multi-File struct example.vcproj", "{933ED4EF-06CF-4A37-B3E9-C5FFC74657EA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StructInitialization", "StructInitialization\StructInitialization.vcproj", "{865D591B-945B-4C32-B0B0-A94D36FB2645}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8E5A31A-9B14-4453-9482-CFB7A831A593}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C8E5A31A-9B14-4453-9482-CFB7A831A593}.Debug|Win32.Build.0 = Debug|Win32
+		{C8E5A31A-9B14-4453-9482-CFB7A831A593}.Release|Win32.ActiveCfg = Release|Win32
+		{C8E5A31A-9B14-4453-9482-CFB7A831A593}.Release|Win32.Build.0 = Release|Win32
+		{933ED4EF-06CF-4A37-B3E9-C5FFC74657EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{933ED4EF-06CF-4A37-B3E9-C5FFC74657EA}.Debug|Win32.Build.0 = Debug|Win32
+		{933ED4EF-06CF-4A37-B3E9-C5FFC74657EA}.Release|Win32.ActiveCfg = Release|Win32
+		{933ED4EF-06CF-4A37-B3E9-C5FFC74657EA}.Release|Win32.Build.0 = Release|Win32
+		{865D591B-945B-4C32-B0B0-A94D36FB2645}.Debug|Win32.ActiveCfg = Debug|Win32
+		{865D591B-945B-4C32-B0B0-A94D36FB2645}.Debug|Win32.Build.0 = Debug|Win32
+		{865D591B-945B-4C32-B0B0-A94D36FB2645}.Release|Win32.ActiveCfg = Release|Win32
+		{865D591B-945B-4C32-B0B0-A94D36FB2645}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

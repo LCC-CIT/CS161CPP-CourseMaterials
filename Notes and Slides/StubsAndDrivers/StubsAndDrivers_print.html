@@ -1,0 +1,315 @@
+<html>
+<head>
+<title>Stubs & Drivers</title>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #fff;
+	font-size: 1em !important;
+}
+p {
+	font-size: .9em;
+}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+	font-size: 1.2em;
+}
+h3 {
+	font-size: 1em;
+	font-weight: bold;
+}
+h1, h2, h3 {
+	color: #000;
+	line-height: 1.1em;
+}
+hr {
+	width: 100%;
+	height: 2px;
+	color: #000;
+	background: #000;
+	border: 0px none !important;
+}
+li {
+	font-size: .9em;
+}
+table {
+	border: 1px solid #000 !important;
+	background-color: #fff !important;
+	color: #000 !important;
+}
+table td {
+	border: 1px solid #000 !important;
+	background-color: #fff !important;
+	color: #000 !important;
+}
+table th {
+	border: 1px solid #000 !important;
+	background-color: #fff !important;
+	color: #000 !important;
+}
+</style>
+</head>
+<body>
+<p><strong>Stubs & Drivers</strong><br>A technique to simplify degugging</p>
+
+<h1>Overview</h1>
+<p>The use of stubs and drivers is a software engineering methodology that facilitates faster development of a working program.</p>
+<h2>Stubs</h2>
+<p>Stubs are just skeletal functions that only have a header and an empty function body like the one below:</p>
+<p style="margin-left: 40.0"><font face="Courier New">int wholeDiv(float dividend, int divisor)<br>
+{</font></p>
+<p style="margin-left: 60.0"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">}</font></p>
+<p>You use stubs to speed up your software deveolpment by writing just the stubs of all your functions before you write any of the code that goes inside the functions. Once you have written all the stubs (includeing a stub main) you can compile just the stubs to see if you have any syntax errors. By checking for syntax errors in just the stubs you will be able to quickly fix any problems. Now you know you have a syntactically correct starting point for your program.</p>
+<h2>Drivers</h2>
+<p>Drivers are short blocks of temporary test code that you write in your program's main so you can test your functions. Here is an example:</p>
+<p style="margin-left: 40.0"><font face="Courier New">int main()</font><br>
+<font face="Courier New">{</font></p>
+<p style="margin-left: 60.0"><font face="Courier New">// Test driver for wholeDiv.</font><br>
+<font face="Courier New">cout &lt;&lt; &quot;8 / 3 should be 2: &quot; &lt;&lt; wholeDiv(8, 3) &lt;&lt; endl;</font><br>
+<font face="Courier New">cout &lt;&lt; &quot;1 / 0 should produce an error message: &quot; &lt;&lt; wholeDiv(1, 0) &lt;&lt; endl;</font><br>
+<font face="Courier New">cout &lt;&lt; &quot;0 / 1 should be 0: &quot; &lt;&lt; wholeDiv(0, 1) &lt;&lt; endl;</font></p>
+<p style="margin-left: 60.0"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 60.0"><font face="Courier New">}</font></p>
+<h2>Using drivers to test functions</h2>
+<p>You use drivers to test each stub before you add code to it. It should fail since it's an empty stub. Then as you add code to flesh out your stub you test the function again and debug it as needed until you have a working function as shown below:</p>
+<p style="margin-left: 40.0"><font face="Courier New">int wholeDiv(float dividend, int divisor)<br>
+{</font></p>
+<p style="margin-left: 60.0"><font face="Courier New">if(divisor == 0)</font><br>
+<font face="Courier New">{</font></p>
+<p style="margin-left: 80.0"><font face="Courier New">cout &lt;&lt; &quot;Error! Division by zero.&quot; &lt;&lt; endl;</font><br>
+<font face="Courier New">return 0;</font></p>
+<p style="margin-left: 60.0"><font face="Courier New">}</font><br>
+<font face="Courier New">else</font></p>
+<p style="margin-left: 80.0"><font face="Courier New">return dividend / divisor;</font></p>
+<p style="margin-left: 60.0"><font face="Courier New">}</font></p>
+<p>&nbsp;</p>
+<p align="center"></p>
+<h1>Example: Using Stubs and Drivers</h1>
+<p>&nbsp;For this example we will write a program that determines the year a person was born based on their age. The program will also need to ask the person if they have had a birthday yet this year and the current year will need to be input or calculated. The program will use input validation. There will be three functions:</p>
+<ol>
+<li>getInput will get numeric input and validate it.</li>
+<li>getYesNo will get y or n and validate it.</li>
+<li>calcBirthYear will calculate the year a person was born.</li>
+</ol>
+<h2>Step A: Write a skeleton program using stubs</h2>
+<p>The example program below shows a skeleton program that just consists of an empty main and stub functions. The purpose of writing just stubs first is that: a) Now you have established the basic structure of your program and it will make it easier to write the rest of the program (like writing an outline before you write an essay.) b) you can compile this to check for syntax errors. You can find and fix any syntax errors in the stubs more easily than you would if these were completed functions. To sum up, starting with stubs will save you time because you will spend less time debugging.</p>
+<p>&nbsp;</p>
+<p style="margin-left: 20.0"><font face="Courier New">#include &lt;iostream&gt;<br>
+using namespace std;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">int getInput(int min, int max);<br>
+bool getYesNo();<br>
+int calcBirthYear(int age, int curYear, bool bDayPassed);</font></p>
+<p style="margin-left: 20.0"></p>
+<p style="margin-left: 20.0"><font face="Courier New">int main()<br>
+{</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0"></p>
+<p style="margin-left: 20.0"><font face="Courier New">// Get input from the user and validate that it is in the<br>
+// range from min to max.<br>
+int getInput(int min, int max)<br>
+{</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0"></p>
+<p style="margin-left: 20.0"><font face="Courier New">// Get user input. Return true for 'y' or 'Y' and false for 'n' or 'N'</font><br>
+<font face="Courier New">// give an error message for anything else<br>
+bool getYesNo()<br>
+{</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">return false;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0"></p>
+<p style="margin-left: 20.0"><font face="Courier New">// Calculate the year the user was born based on their age,<br>
+// the current year, and whether they have had a birthday this year<br>
+int calcBirthYear(int age, int curYear, bool bDayPassed)<br>
+{</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0"></p>
+<p align="center"></p>
+<h2 style="margin-left: 20.0">Step B: Write test drivers; then write and test the functions</h2>
+<p style="margin-left: 20.0">This step really breaks down into several more smaller steps that you will repeat for all of your functions:</p>
+<ol>
+<li>Write a driver for one of your functions and test it using the stub fuction</li>
+<li>Write the code that goes inside the function and test it using the driver</li>
+<li>Fix any bugs and test the function again<br>
+(Repeat step 3 until the function works correctly.)<br>
+</li>
+</ol>
+<h3 style="margin-left: 20.0">Step B1: write a driver for getInput and test it</h3>
+<p style="margin-left: 20.0">This code goes in the main:</p>
+<p style="margin-left: 20.0"><font face="Courier New">// Test driver for getInput should only return numbers<br>
+// 0 through 10. Enter 0 to exit. Be sure to test 0, 100 and something in between.<br>
+// (The loop is for loop for convenient testing)</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">int num = 0;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">do<br>
+{</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">num = getInput(0, 100);<br>
+cout &lt;&lt; &quot;You entered: &quot; &lt;&lt; num &lt;&lt; endl;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">} while (num &gt; 0);</font></p>
+<p style="margin-left: 20.0"></p>
+<p style="margin-left: 20.0">When you run the program, you will just get zero for an output since you haven't written the code that goes inside the function getInput, but this is good, butcause it shows you that the driver is working and that your function fails. You want it to fail since it is just a stub!</p>
+<h3 style="margin-left: 20.0">Step B2: write the code that goes inside getInput and test it</h3>
+<p style="margin-left: 20.0"><font face="Courier New">int getInput(int min, int max)<br>
+{</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">int userNum = 0;</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">cout &lt;&lt; &quot;Enter a number from &quot; &lt;&lt; min &lt;&lt; &quot; to &quot; &lt;&lt; max &lt;&lt; &quot; :&quot;;<br>
+cin &gt;&gt; userNum;<br>
+while (userNum &lt; min &amp;&amp; userNum &gt; max)</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">{</font></p>
+<p style="margin-left: 60.0"><font face="Courier New">cout &lt;&lt; &quot;Your number was out of range, reenter: &quot;;<br>
+cin &gt;&gt; userNum;</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">}</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">return userNum;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0"></p>
+<h3>Step B3: Fix any bugs and test the function again</h3>
+<p>There was a bug in getInput. Did you find it? The relational operator in the while statement should have been OR instead of AND. Fix that bug and test the function again. It should work.</p>
+<p>&nbsp;</p>
+<p align="center"></p>
+<h3>Steps B1 through B3 for the function getYesNo</h3>
+<p>Now write the test driver for getYesNo and test it with the stub function getYesNo. An example driver is shown below. Notice that it is very simple, just a call to the function inside a cout statement so you can see what is returned by the function.</p>
+<p><font face="Courier New">// Test driver for getYesNo should only return true for y and false for n<br>
+// Be sure to test y, Y, n, N and some other letters.<br>
+cout &lt;&lt; &quot;You entered: &quot; &lt;&lt; getYesNo() &lt;&lt; endl;</font></p>
+<p>&nbsp;</p>
+<p>Next write the code that goes in the body of getYesNo and test the function</p>
+<p>&nbsp;</p>
+<p>&nbsp;<font face="Courier New">bool getYesNo()</font><br>
+<font face="Courier New">{</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">char userLetter = 'x';</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">cout &lt;&lt; &quot;Enter y or n: &quot;;</font><br>
+<font face="Courier New">cin &gt;&gt; userLetter;</font><br>
+<font face="Courier New">while (userLetter != 'n' &amp;&amp; userLetter != 'N' &amp;&amp; userLetter != 'y' &amp;&amp; userLetter != 'Y')</font><br>
+<font face="Courier New">{</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">cout &lt;&lt; &quot;You did not enter y or n, reenter: &quot;;</font><br>
+<font face="Courier New">cin &gt;&gt; userLetter;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">return (userLetter == 'y' || userLetter == 'N');</font></p>
+<p><font face="Courier New">}</font></p>
+<p>&nbsp;</p>
+<p>Testing this function with the test driver will show that it returns a true for Y or y and false for n or N and an error message for any other entry.</p>
+<p>&nbsp;</p>
+<h3>Steps B1 through B3 for the function calcBirthYear</h3>
+<p>Finally we will write a test driver for our last function; then write the body of the function; and test the function with the driver. The driver and the completed function are shown below:</p>
+<p><font face="Courier New">// Test driver for calcBirthYear<br>
+cout &lt;&lt; &quot;For age 50, already had a birthday, should be 1960: &quot; &lt;&lt; calcBirthYear(50, 2010, true) &lt;&lt; endl<br>
+cout &lt;&lt; &quot;For age 10, hasn't had a birthday yet, should be 1999: &quot; &lt;&lt; calcBirthYear(10, 2010, false) &lt;&lt; endl;</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New">int calcBirthYear(int age, int curYear, bool bDayPassed)</font><br>
+<font face="Courier New">{</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">if (bDayPassed)</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">return curYear - age;</font></p>
+<p style="margin-left: 20.0"><font face="Courier New">else</font></p>
+<p style="margin-left: 40.0"><font face="Courier New">return curYear - age - 1;</font></p>
+<p><font face="Courier New">}</font></p>
+<p>&nbsp;</p>
+<p align="center"></p>
+<h3>Step C: Write the main for the program</h3>
+<p>Now that you have all your functions written and tested it is relatively easy to write the main program. The fact that you know all your functions work will make any debugging much easier. The completed program is shown below. Notice that the stubs have been saved in a comment block outside the main and the drivers have been saved in a comment block inside the main.</p>
+<p>&nbsp;</p>
+<p>#include &lt;iostream&gt;</p>
+<p>using namespace std;</p>
+<p>&nbsp;</p>
+<p>int getInput(int min, int max);</p>
+<p>bool getYesNo();</p>
+<p>int calcBirthYear(int age, int curYear, bool bDayPassed);</p>
+<p>&nbsp;</p>
+<p>int main()</p>
+<p>{</p>
+<p style="margin-left: 20.0">// Get user input<br>
+cout &lt;&lt; &quot;How old are you?&quot; &lt;&lt; endl;<br>
+int age = getInput(1, 125);<br>
+cout &lt;&lt; &quot;Have you had a birthday yet?&quot; &lt;&lt; endl;<br>
+bool hadBDay = getYesNo();</p>
+<p style="margin-left: 20.0">// Use a constant for the current year until we figure out how to compute it from time()<br>
+const int thisYear = 2010;</p>
+<p style="margin-left: 20.0">cout &lt;&lt; &quot;You were born in &quot; &lt;&lt; calcBirthYear(age, thisYear, hadBDay) &lt;&lt; endl;</p>
+<p style="margin-left: 20.0">return 0;</p>
+<p style="margin-left: 20.0">/* // Test Drivers<br>
+// Driver for calcBirthYear<br>
+cout &lt;&lt; &quot;For age 50, already had a birthday, should be 1960: &quot; &lt;&lt; calcBirthYear(50, 2010, true) &lt;&lt; endl;<br>
+cout &lt;&lt; &quot;For age 10, hasn't had a birthday yet, should be 1999: &quot; &lt;&lt; calcBirthYear(10, 2010, false) &lt;&lt; endl;</p>
+<p style="margin-left: 20.0"></p>
+<p style="margin-left: 20.0">// Driver for getYesNo should only return true for y and false for n<br>
+// Be sure to test y, Y, n, N and some other letters.<br>
+cout &lt;&lt; &quot;You entered: &quot; &lt;&lt; getYesNo() &lt;&lt; endl;</p>
+<p style="margin-left: 20.0"></p>
+<p style="margin-left: 20.0">// Driver for getInput should only return numbers<br>
+// 0 through 10. Enter 0 to exit. Be sure to test 0, 100 and something in between.<br>
+// (The loop is for loop for convenient testing)</p>
+<p style="margin-left: 20.0">int num = 0;</p>
+<p style="margin-left: 20.0">do<br>
+{</p>
+<p style="margin-left: 40.0">num = getInput(0, 100);<br>
+cout &lt;&lt; &quot;You entered: &quot; &lt;&lt; num &lt;&lt; endl;</p>
+<p style="margin-left: 20.0">} while (num &gt; 0);</p>
+<p style="margin-left: 20.0">*/</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>// Get input from the user and validate that it is in the<br>
+// range from min to max.<br>
+int getInput(int min, int max)<br>
+{</p>
+<p style="margin-left: 20.0">int userNum = 0;</p>
+<p style="margin-left: 20.0">cout &lt;&lt; &quot;Enter a number from &quot; &lt;&lt; min &lt;&lt; &quot; to &quot; &lt;&lt; max &lt;&lt; &quot;: &quot;;<br>
+cin &gt;&gt; userNum;</p>
+<p style="margin-left: 20.0">while (userNum &lt; min || userNum &gt; max)<br>
+{</p>
+<p style="margin-left: 40.0">cout &lt;&lt; &quot;Your number was out of range, reenter: &quot;;</p>
+<p style="margin-left: 40.0">cin &gt;&gt; userNum;</p>
+<p style="margin-left: 20.0">}</p>
+<p style="margin-left: 20.0">&nbsp;</p>
+<p style="margin-left: 20.0">return userNum;</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>// Get user input. Return true for 'y' or 'Y' and false for 'n' or 'N'<br>
+// give an error message for anything else.</p>
+<p>bool getYesNo()<br>
+{</p>
+<p style="margin-left: 20.0">char userLetter = 'x';<br>
+cout &lt;&lt; &quot;Enter y or n: &quot;;<br>
+cin &gt;&gt; userLetter;</p>
+<p style="margin-left: 20.0">while (userLetter != 'n' &amp;&amp; userLetter != 'N' &amp;&amp; userLetter != 'y' &amp;&amp; userLetter != 'Y')<br>
+{</p>
+<p style="margin-left: 40.0">cout &lt;&lt; &quot;You did not enter y or n, reenter: &quot;;<br>
+cin &gt;&gt; userLetter;</p>
+<p style="margin-left: 20.0">}</p>
+<p style="margin-left: 20.0">return (userLetter == 'y' || userLetter == 'N');</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>// Calculate the year the user was born based on their age,<br>
+// the current year, and whether they have had a birthday this year<br>
+int calcBirthYear(int age, int curYear, bool bDayPassed)</p>
+<p>{</p>
+<p style="margin-left: 20.0">if (bDayPassed)</p>
+<p style="margin-left: 40.0">return curYear - age;</p>
+<p style="margin-left: 20.0">else</p>
+<p style="margin-left: 40.0">return curYear - age - 1;</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>/* // Stubs</p>
+<p>int getInput(int min, int max)</p>
+<p>{</p>
+<p style="margin-left: 20.0">return 0;</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>bool getYesNo()</p>
+<p>{</p>
+<p style="margin-left: 20.0">return false;</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>int calcBirthYear(int age, int curYear, bool bDayPassed)</p>
+<p>{</p>
+<p style="margin-left: 20.0">return 0;</p>
+<p>}</p>
+<p>*/</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

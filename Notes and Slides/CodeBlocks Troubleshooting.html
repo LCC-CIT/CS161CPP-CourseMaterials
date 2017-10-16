@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+<meta content="en-us" http-equiv="Content-Language">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<title>Untitled 1</title>
+<style type="text/css">
+.style1 {
+	list-style-type: lower-alpha;
+}
+.style3 {
+	list-style-type: lower-roman;
+}
+.style4 {
+	margin-left: 40px;
+}
+.style5 {
+	text-decoration: underline;
+}
+</style>
+</head><body>
+
+<h1>Code::Blocks Troubleshooting Tips</h1>
+<p>One of the most common problems that students have had with
+<a href="http://www.codeblocks.org/">Code::Blocks</a> is that after it has been 
+first set up it won't run the compiler. There are a number of possible causes:</p>
+<ol>
+	<li><strong>There is no compiler installed.</strong><br>
+	Code::Blocks is mainly just a user interface. It requires a separtate 
+	compiler and C++ libraries to do the actual compiling, linking, and 
+	debugging. In the Code::Blocks setup menu this is referred to as a 
+	"toolchain". If you already have a compiler and it's associated tools 
+	installed on your computer, then you can just install Code::Blocks by itself 
+	and it will use the compiler that is already installed. It supports quite a 
+	few compilers: Visual Studio C++, GNU Compiler Collection (GCC), 
+	MinGW (Minimal GCC for Windows), etc. The setup file for just the Code::Blocks 
+	IDE by itself is:
+	<a href="http://prdownload.berlios.de/codeblocks/codeblocks-10.05-setup.exe">
+	codeblocks-10.05-setup.exe</a>. But&nbsp; if you don't already have a compiler 
+	instaled on your computer, then you should install Code::Blocks 
+	with MinGW. The combined setup file for Code::Blocks and MinGW is:
+	<a href="http://prdownload.berlios.de/codeblocks/codeblocks-10.05mingw-setup.exe">
+	codeblocks-10.05mingw-setup.exe</a>. This is the setup file that will work 
+	the best in most situations.<br>
+	<span class="style5">Solutions</span><ol class="style1">
+		<li>&nbsp;Reinstall Code::Blocks using the setup program that includes 
+		MinGW:&nbsp;
+		<a href="http://prdownload.berlios.de/codeblocks/codeblocks-10.05mingw-setup.exe">
+		codeblocks-10.05mingw-setup.exe</a></li>
+		<li>Solution b: Leave Code::Blocks installed, but install a 
+		compiler/toolchain to work with it. You can download the setup progam for
+		<a href="http://www.mingw.org/">MinGW</a> here:
+		<a href="http://sourceforge.net/projects/mingw/files/">MinGW download page</a>. When you run the MinGW installer, be sure to select 
+		the C++ compiler and the MinGW Developer Toolkit in addition to the MinGW base files.<br>
+		Important: After installing MinGW, you need to set the toolset path in 
+		Code::Blocks to point to your MinGW installation. See the section below 
+		for instructions.<br>
+		</li>
+	</ol>
+	</li>
+	<li><strong>The compiler is installed, but Code::Blocks can't find it.<br>
+	</strong><span class="style5">Solutions</span><ol class="style1">
+		<li>Use the Code::Blocks auto-detect feature to find the compiler<ol class="style3">
+			<li>On the Code::Blocks menu, go to "Settings", next click on 
+			"Compiler and Debugger...". This will open the "Compiler and 
+			debugger settings dialog".</li>
+			<li>Under "Selected compiler" select the name of the compiler you 
+			are using. For most of you it will be "GNU GCC Compiler".</li>
+			<li>Click on the tab that says "Toolchain executables", then click 
+			the button "Auto-detect". This should cause the compiler's 
+			installation directory to be automatically inserted into the text 
+			box to the left of the button.</li>
+		</ol>
+		</li>
+	</ol>
+	<ol class="style1" start="2">
+		<li>Manually enter the path to the compiler's installation directory</li>
+	</ol>
+	</li>
+	<ol class="style1">
+		<ol class="style3">
+			<li>On the Code::Blocks menu, go to "Settings", next click on 
+			"Compiler and Debugger...". This will open the "Compiler and 
+			debugger settings dialog".</li>
+			<li>Under "Selected compiler" select the name of the compiler you 
+			are using. For most of you it will be "GNU GCC Compiler".</li>
+			<li>Click on the tab that says "Toolchain executables", then type in 
+			the path to the compiler's installation directory in the text box 
+			labeld "Compiler's installation directory".</li>
+			<li>Be sure the names of all the executables are entered in the 
+			spaces listed under "Program Files".</li>
+		</ol>
+	</ol>
+</ol>
+<p class="style4" style="width: 704px;">The screen shot below shows the default 
+compiler and debugger settings if you installed Code::Blocks with the setup 
+program that includes MinGW. These settings are the same on Windows XP, Vista, and Windows 7. 
+(I've personally installed and tested Code::Blocks on 32 bit versions of each 
+Windows OS and the 64 bit version of Windows 7.)<br>
+<img alt="" src="CodeblocksScreenShot1.jpg" width="650" height="582"></p>
+<ol start="3">
+	<li><strong>You don't have permission to write to the&nbsp; directory 
+	(folder) where your source code (.cpp file) is located.<br>
+	</strong><span class="style5">Solution</span><strong><br>
+	</strong>Save your source file to your Documents folder, or some other 
+	location (like the desktop) that you know your user login has permission to 
+	write to.</li>
+	<li><strong>You created a .c source file instead of a .cpp source file.<br>
+	</strong><span class="style5">Solution</span><br>
+	Using the "Save as" option from the Code::Blocks file menu, save the source 
+	file as a .cpp file.</li>
+</ol>
+
+<p>by Brian Bird<br>
+for CS133G Beginning C++ for Gaming<br>
+Lane Community College</p>
+
+</body></html>

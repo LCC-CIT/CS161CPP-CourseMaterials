@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" dir="ltr">
+<head>
+<!-- This file is created by SoftChalk LessonBuilder -->
+<!-- LessonBuilder Version 6.04.04 -->
+<title>Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="SoftChalk LessonBuilder 6.04.04">
+<script type="text/javascript">var passing_score = 0;</script>
+<script type="text/javascript">var lessonID = 1290120435706;</script>
+<link href="StubsAndDrivers.css" rel="stylesheet" type="text/css">
+<link href="StubsAndDrivers_print.css" rel="stylesheet" type="text/css" media="print">
+<script src="sclb_extras/overlibmws/overlibmws.js" type="text/javascript"></script>
+<script src="sclb_extras/overlibmws/overlibmws_shadow.js" type="text/javascript"></script>
+<script type="text/javascript">OLbubbleImageDir = "./sclb_extras/overlibmws/";</script>
+<script src="sclb_extras/overlibmws/overlibmws_bubble.js" type="text/javascript"></script>
+<script src="sclb_extras/flashobject.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+	var scoreQa = new Array();
+	var score_a = new Array();
+	var q_done_a = new Array();
+	var show_restart_a = new Array();
+	var actOrder = new Array();
+//-->
+</script>
+<script type="text/javascript">
+<!--
+	var q_item = 0;
+	var scoreQ = new Array();
+	var q_done = new Array();
+	var qOrder = new Array();
+	scorm_completed_status = true;
+//-->
+</script>
+<script type="text/javascript">
+<!--
+	if (parent.parent.document.getElementById("SCLBCourseIndexPage")) {
+		var myLoc = location.href;
+		var myLoc_array = myLoc.split("/");
+		mySplit = myLoc_array[myLoc_array.length - 2] + myLoc_array[myLoc_array.length - 1];
+		mySplit_cut = mySplit.substring(0, mySplit.length - 5);
+		parent.parent.file_name = mySplit_cut;
+		myImage = eval("parent.parent.nav.document." + parent.parent.file_name);
+		myImage.src = "arrow.png";
+
+		if (parent.parent.previous_page) {
+			loc_old = parent.parent.previous_page;
+			myImage_old = eval("parent.parent.nav.document." + loc_old);
+			myImage_old.src = "check.png";
+			parent.parent.previous_page = parent.parent.file_name;
+		}
+		if (!parent.parent.previous_page) {
+			parent.parent.previous_page = parent.parent.file_name;
+		}
+	}
+//-->
+</script>
+<style type="text/css">
+#navOpenCloseTop {
+	float: left;
+	margin: 2px;
+}
+</style>
+<style type="text/css">
+.hide_stuff {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+</style>
+<!-- endscID -->
+</head>
+
+<body>
+<div id=div45dfWo9jkDyQp5jZd style="position: absolute; visibility: hidden; z-index: 1001;"></div>
+<div id=ds45dfWo9jkDyQp5jZd style="position:absolute; visibility:hidden; z-index:1007;"></div>
+<div id="banner">
+<h1>Stubs & Drivers</h1>
+<h2>A technique to simplify degugging</h2>
+
+<div id="nav">
+<div id="printall"><a href="StubsAndDrivers_print.html" target="_blank">print all</a></div>
+<span id="navOpenCloseTop"></span>
+<div style="margin: 0; padding: 0;"><a href="#endofnav"><img title="skip navigation" src="spacer.gif" border="0" width="0" height="0"></a></div>
+<div id="navindent">
+
+<ul>
+<li><a href="StubsAndDrivers_toc.html" title="Table of Contents">&nbsp;&nbsp;Contents&nbsp;&nbsp;</a></li>
+<li><strong>&nbsp;&nbsp;Page:</strong></li>
+<li><a href="StubsAndDrivers.html" title="Overview">&nbsp;&nbsp;1&nbsp;&nbsp;</a></li>
+<li> | <span class="yourhere">&nbsp;&nbsp;2&nbsp;&nbsp;</span></li>
+<li> | <a href="StubsAndDrivers3.html" title="Example (continued)">&nbsp;&nbsp;3&nbsp;&nbsp;</a></li>
+<li> | <a href="StubsAndDrivers4.html" title="Example (continued)">&nbsp;&nbsp;4&nbsp;&nbsp;</a></li>
+<li> | <a href="StubsAndDrivers5.html" title="Example (continued)">&nbsp;&nbsp;5&nbsp;&nbsp;</a></li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="endofnav"></div>
+
+<div id="content2">
+<!-- start content -->
+
+<a name="example:usingstubsanddrivers"></a><h1>Example: Using Stubs and Drivers</h1>
+<p>&nbsp;For this example we will write a program that determines the year a person was born based on their age. The program will also need to ask the person if they have had a birthday yet this year and the current year will need to be input or calculated. The program will use input validation. There will be three functions:</p>
+<ol>
+<li>getInput will get numeric input and validate it.</li>
+<li>getYesNo will get y or n and validate it.</li>
+<li>calcBirthYear will calculate the year a person was born.</li>
+</ol>
+<a name="stepa:writeaskeletonprogramusingstubs"></a><h2>Step A: Write a skeleton program using stubs</h2>
+<p>The example program below shows a skeleton program that just consists of an empty main and stub functions. The purpose of writing just stubs first is that: a) Now you have established the basic structure of your program and it will make it easier to write the rest of the program (like writing an outline before you write an essay.) b) you can compile this to check for syntax errors. You can find and fix any syntax errors in the stubs more easily than you would if these were completed functions. To sum up, starting with stubs will save you time because you will spend less time debugging.</p>
+<p>&nbsp;</p>
+<p style="margin-left: 20.0px"><font face="Courier New">#include &lt;iostream&gt;<br>
+using namespace std;</font></p>
+<p style="margin-left: 20.0px"><font face="Courier New">int getInput(int min, int max);<br>
+bool getYesNo();<br>
+int calcBirthYear(int age, int curYear, bool bDayPassed);</font></p>
+<p style="margin-left: 20.0px"></p>
+<p style="margin-left: 20.0px"><font face="Courier New">int main()<br>
+{</font></p>
+<p style="margin-left: 40.0px"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 20.0px"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0px"></p>
+<p style="margin-left: 20.0px"><font face="Courier New">// Get input from the user and validate that it is in the<br>
+// range from min to max.<br>
+int getInput(int min, int max)<br>
+{</font></p>
+<p style="margin-left: 40.0px"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 20.0px"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0px"></p>
+<p style="margin-left: 20.0px"><font face="Courier New">// Get user input. Return true for 'y' or 'Y' and false for 'n' or 'N'</font><br>
+<font face="Courier New">// give an error message for anything else<br>
+bool getYesNo()<br>
+{</font></p>
+<p style="margin-left: 40.0px"><font face="Courier New">return false;</font></p>
+<p style="margin-left: 20.0px"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0px"></p>
+<p style="margin-left: 20.0px"><font face="Courier New">// Calculate the year the user was born based on their age,<br>
+// the current year, and whether they have had a birthday this year<br>
+int calcBirthYear(int age, int curYear, bool bDayPassed)<br>
+{</font></p>
+<p style="margin-left: 40.0px"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 20.0px"><font face="Courier New">}</font></p>
+<p style="margin-left: 20.0px"></p>
+<!-- end content -->
+
+<!-- submit goes here -->
+
+<br><p class="top"><span id="navOpenCloseBottom"></span><a href="StubsAndDrivers_toc.html" title="Table of Contents">toc</a> | <a href="#">return to top</a> | <a href="StubsAndDrivers.html">previous page</a> | <a href="StubsAndDrivers3.html">next page</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="footer">
+<p>
+Content &#169;2010. All Rights Reserved.<br>
+Date last modified: November 20, 2010.<br>
+Written By Brian Bird<br>
+<a class="textpopper" href="javascript:void(0);" onmouseover="return overlib('<div style=\'text-align:center;\'>LessonBuilder 6.04.04</div>', PADX, 3, 3, PADY, 3, 3, BORDER, 1, BGCOLOR, '#000000', FGCOLOR, '#ffffff', WIDTH, 70, TEXTSIZE, 1);" onmouseout="nd();"><img src="spacer.gif" border="0" width="200" height="6"></a></p>
+</div>
+
+<p>&nbsp;</p>
+
+</div>
+
+<script type="text/javascript">
+<!--
+	if (parent.parent.document.getElementById("SCLBCourseIndexPage")) {
+
+		var toggLink = document.getElementById("navOpenCloseTop");
+		if (toggLink != null)
+			toggLink.innerHTML = '<a href="javascript:parent.parent.toggleFrame()"><img src="../navClose_custom.png" name="open_nav" alt="Open/Close Course Navigation" border="0"></a>';
+
+		toggLink = document.getElementById("navOpenCloseBottom");
+		if (toggLink != null)
+			toggLink.innerHTML = '<a href="javascript:parent.parent.toggleFrame()" title="Open/Close Course Navigation">navigation</a> | ';
+	}
+-->
+</script>
+
+</body>
+</html>

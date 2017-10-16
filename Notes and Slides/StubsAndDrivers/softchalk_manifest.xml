@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lesson>
+<id>1290120435706</id>
+<points>0</points>
+<name><![CDATA[Stubs & Drivers]]></name>
+<ContentItems xmlns:dc="http://purl.org/dc/elelements/1.1">
+    <ContentItem>
+        <dc:title><![CDATA[Stubs & Drivers]]></dc:title>
+        <dc:description>Lesson created by SoftChalk LessonBuilder</dc:description>
+        <dc:creator> </dc:creator>
+        <dc:contributor>None</dc:contributor>
+        <dc:source>None</dc:source>
+        <dc:relation>None</dc:relation>
+        <dc:rights>yes</dc:rights>
+        <dc:coverage/>
+        <dc:subject/>
+        <keyword>Stubs and Drivers</keyword>
+        <keyword>Overview</keyword>
+        <keyword>Example Using Stubs and Drivers</keyword>
+        <dc:format>HTML / XHTML</dc:format>
+        <dc:type>Tutorial</dc:type>
+        <dc:audience>Unspecified</dc:audience>
+        <dc:license>Unspecified</dc:license>
+        <dc:publisher>SoftChalk</dc:publisher>
+        <version>1.0</version>
+        <Cost Currency="USD">None</Cost>
+        <SubTitle/>
+        <SingleTry/>
+        <TotalPoints/>
+        <SchoolName/>
+        <Language/>
+        <NumberOfPages/>
+        <MainFileName>StubsAndDrivers</MainFileName>
+        <CreatorFirstName/>
+        <CreatorLastName/>
+        <Subjects/>
+        <Levels/>
+        <ImagesPresent>false</ImagesPresent>
+        <ImageEquivalents>false</ImageEquivalents>
+        <ImageEquivalentsPresentation>Unspecified</ImageEquivalentsPresentation>
+        <StructuralElements/>
+        <FlashingPresent>false</FlashingPresent>
+        <FlashingSlow>false</FlashingSlow>
+        <FlashingDisablable>false</FlashingDisablable>
+        <MultimediaPresent>false</MultimediaPresent>
+        <MultimediaFormats/>
+        <MultimediaAlternatives/>
+        <MultimediaComment/>
+        <TablesPresent>false</TablesPresent>
+        <TablesPresentation>Unspecified</TablesPresentation>
+        <TableRowsColumnsIdentified>false</TableRowsColumnsIdentified>
+        <ColorUsedForInformation>false</ColorUsedForInformation>
+        <ColorAlternativesPresent>false</ColorAlternativesPresent>
+        <TextContrast>Good</TextContrast>
+        <TextModifiables/>
+        <CommericalAlternative>false</CommericalAlternative>
+        <CommericalAlternativeObjects>false</CommericalAlternativeObjects>
+        <CommericalAlternativeReadingOrder>false</CommericalAlternativeReadingOrder>
+        <FramesPresent>true</FramesPresent>
+        <FormsPresent>false</FormsPresent>
+        <ImageMapsPresent>false</ImageMapsPresent>
+        <TimedResponseUsed>false</TimedResponseUsed>
+        <Hazards>
+            <Hazard>None</Hazard>
+        </Hazards>
+        <SupportTools>
+            <SupportTool>None</SupportTool>
+        </SupportTools>
+        <StandardsSupport>
+            <WCAGLevel>WCAG1A</WCAGLevel>
+            <LegislationSupport>
+                <Legislation>US (Section 508)</Legislation>
+            </LegislationSupport>
+            <StandardsComment/>
+        </StandardsSupport>
+    </ContentItem>
+</ContentItems>
+</lesson>

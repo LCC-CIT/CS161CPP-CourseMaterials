@@ -1,0 +1,250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" dir="ltr">
+<head>
+<!-- This file is created by SoftChalk LessonBuilder -->
+<!-- LessonBuilder Version 6.04.04 -->
+<title>Example (continued)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="SoftChalk LessonBuilder 6.04.04">
+<script type="text/javascript">var passing_score = 0;</script>
+<script type="text/javascript">var lessonID = 1290120435706;</script>
+<link href="StubsAndDrivers.css" rel="stylesheet" type="text/css">
+<link href="StubsAndDrivers_print.css" rel="stylesheet" type="text/css" media="print">
+<script src="sclb_extras/overlibmws/overlibmws.js" type="text/javascript"></script>
+<script src="sclb_extras/overlibmws/overlibmws_shadow.js" type="text/javascript"></script>
+<script type="text/javascript">OLbubbleImageDir = "./sclb_extras/overlibmws/";</script>
+<script src="sclb_extras/overlibmws/overlibmws_bubble.js" type="text/javascript"></script>
+<script src="sclb_extras/flashobject.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+	var scoreQa = new Array();
+	var score_a = new Array();
+	var q_done_a = new Array();
+	var show_restart_a = new Array();
+	var actOrder = new Array();
+//-->
+</script>
+<script type="text/javascript">
+<!--
+	var q_item = 0;
+	var scoreQ = new Array();
+	var q_done = new Array();
+	var qOrder = new Array();
+	scorm_completed_status = true;
+//-->
+</script>
+<script type="text/javascript">
+<!--
+	if (parent.parent.document.getElementById("SCLBCourseIndexPage")) {
+		var myLoc = location.href;
+		var myLoc_array = myLoc.split("/");
+		mySplit = myLoc_array[myLoc_array.length - 2] + myLoc_array[myLoc_array.length - 1];
+		mySplit_cut = mySplit.substring(0, mySplit.length - 5);
+		parent.parent.file_name = mySplit_cut;
+		myImage = eval("parent.parent.nav.document." + parent.parent.file_name);
+		myImage.src = "arrow.png";
+
+		if (parent.parent.previous_page) {
+			loc_old = parent.parent.previous_page;
+			myImage_old = eval("parent.parent.nav.document." + loc_old);
+			myImage_old.src = "check.png";
+			parent.parent.previous_page = parent.parent.file_name;
+		}
+		if (!parent.parent.previous_page) {
+			parent.parent.previous_page = parent.parent.file_name;
+		}
+	}
+//-->
+</script>
+<style type="text/css">
+#navOpenCloseTop {
+	float: left;
+	margin: 2px;
+}
+</style>
+<style type="text/css">
+.hide_stuff {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+</style>
+<!-- endscID -->
+</head>
+
+<body>
+<div id=div45dfWo9jkDyQp5jZd style="position: absolute; visibility: hidden; z-index: 1001;"></div>
+<div id=ds45dfWo9jkDyQp5jZd style="position:absolute; visibility:hidden; z-index:1007;"></div>
+<div id="banner">
+<h1>Stubs & Drivers</h1>
+<h2>A technique to simplify degugging</h2>
+
+<div id="nav">
+<div id="printall"><a href="StubsAndDrivers_print.html" target="_blank">print all</a></div>
+<span id="navOpenCloseTop"></span>
+<div style="margin: 0; padding: 0;"><a href="#endofnav"><img title="skip navigation" src="spacer.gif" border="0" width="0" height="0"></a></div>
+<div id="navindent">
+
+<ul>
+<li><a href="StubsAndDrivers_toc.html" title="Table of Contents">&nbsp;&nbsp;Contents&nbsp;&nbsp;</a></li>
+<li><strong>&nbsp;&nbsp;Page:</strong></li>
+<li><a href="StubsAndDrivers.html" title="Overview">&nbsp;&nbsp;1&nbsp;&nbsp;</a></li>
+<li> | <a href="StubsAndDrivers2.html" title="Example">&nbsp;&nbsp;2&nbsp;&nbsp;</a></li>
+<li> | <a href="StubsAndDrivers3.html" title="Example (continued)">&nbsp;&nbsp;3&nbsp;&nbsp;</a></li>
+<li> | <a href="StubsAndDrivers4.html" title="Example (continued)">&nbsp;&nbsp;4&nbsp;&nbsp;</a></li>
+<li> | <span class="yourhere">&nbsp;&nbsp;5&nbsp;&nbsp;</span></li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="endofnav"></div>
+
+<div id="content2">
+<!-- start content -->
+
+<a name="stepc:writethemainfortheprogram"></a><h3>Step C: Write the main for the program</h3>
+<p>Now that you have all your functions written and tested it is relatively easy to write the main program. The fact that you know all your functions work will make any debugging much easier. The completed program is shown below. Notice that the stubs have been saved in a comment block outside the main and the drivers have been saved in a comment block inside the main.</p>
+<p>&nbsp;</p>
+<p>#include &lt;iostream&gt;</p>
+<p>using namespace std;</p>
+<p>&nbsp;</p>
+<p>int getInput(int min, int max);</p>
+<p>bool getYesNo();</p>
+<p>int calcBirthYear(int age, int curYear, bool bDayPassed);</p>
+<p>&nbsp;</p>
+<p>int main()</p>
+<p>{</p>
+<p style="margin-left: 20.0px">// Get user input<br>
+cout &lt;&lt; &quot;How old are you?&quot; &lt;&lt; endl;<br>
+int age = getInput(1, 125);<br>
+cout &lt;&lt; &quot;Have you had a birthday yet?&quot; &lt;&lt; endl;<br>
+bool hadBDay = getYesNo();</p>
+<p style="margin-left: 20.0px">// Use a constant for the current year until we figure out how to compute it from time()<br>
+const int thisYear = 2010;</p>
+<p style="margin-left: 20.0px">cout &lt;&lt; &quot;You were born in &quot; &lt;&lt; calcBirthYear(age, thisYear, hadBDay) &lt;&lt; endl;</p>
+<p style="margin-left: 20.0px">return 0;</p>
+<p style="margin-left: 20.0px">/* // Test Drivers<br>
+// Driver for calcBirthYear<br>
+cout &lt;&lt; &quot;For age 50, already had a birthday, should be 1960: &quot; &lt;&lt; calcBirthYear(50, 2010, true) &lt;&lt; endl;<br>
+cout &lt;&lt; &quot;For age 10, hasn't had a birthday yet, should be 1999: &quot; &lt;&lt; calcBirthYear(10, 2010, false) &lt;&lt; endl;</p>
+<p style="margin-left: 20.0px"></p>
+<p style="margin-left: 20.0px">// Driver for getYesNo should only return true for y and false for n<br>
+// Be sure to test y, Y, n, N and some other letters.<br>
+cout &lt;&lt; &quot;You entered: &quot; &lt;&lt; getYesNo() &lt;&lt; endl;</p>
+<p style="margin-left: 20.0px"></p>
+<p style="margin-left: 20.0px">// Driver for getInput should only return numbers<br>
+// 0 through 10. Enter 0 to exit. Be sure to test 0, 100 and something in between.<br>
+// (The loop is for loop for convenient testing)</p>
+<p style="margin-left: 20.0px">int num = 0;</p>
+<p style="margin-left: 20.0px">do<br>
+{</p>
+<p style="margin-left: 40.0px">num = getInput(0, 100);<br>
+cout &lt;&lt; &quot;You entered: &quot; &lt;&lt; num &lt;&lt; endl;</p>
+<p style="margin-left: 20.0px">} while (num &gt; 0);</p>
+<p style="margin-left: 20.0px">*/</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>// Get input from the user and validate that it is in the<br>
+// range from min to max.<br>
+int getInput(int min, int max)<br>
+{</p>
+<p style="margin-left: 20.0px">int userNum = 0;</p>
+<p style="margin-left: 20.0px">cout &lt;&lt; &quot;Enter a number from &quot; &lt;&lt; min &lt;&lt; &quot; to &quot; &lt;&lt; max &lt;&lt; &quot;: &quot;;<br>
+cin &gt;&gt; userNum;</p>
+<p style="margin-left: 20.0px">while (userNum &lt; min || userNum &gt; max)<br>
+{</p>
+<p style="margin-left: 40.0px">cout &lt;&lt; &quot;Your number was out of range, reenter: &quot;;</p>
+<p style="margin-left: 40.0px">cin &gt;&gt; userNum;</p>
+<p style="margin-left: 20.0px">}</p>
+<p style="margin-left: 20.0px">&nbsp;</p>
+<p style="margin-left: 20.0px">return userNum;</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>// Get user input. Return true for 'y' or 'Y' and false for 'n' or 'N'<br>
+// give an error message for anything else.</p>
+<p>bool getYesNo()<br>
+{</p>
+<p style="margin-left: 20.0px">char userLetter = 'x';<br>
+cout &lt;&lt; &quot;Enter y or n: &quot;;<br>
+cin &gt;&gt; userLetter;</p>
+<p style="margin-left: 20.0px">while (userLetter != 'n' &amp;&amp; userLetter != 'N' &amp;&amp; userLetter != 'y' &amp;&amp; userLetter != 'Y')<br>
+{</p>
+<p style="margin-left: 40.0px">cout &lt;&lt; &quot;You did not enter y or n, reenter: &quot;;<br>
+cin &gt;&gt; userLetter;</p>
+<p style="margin-left: 20.0px">}</p>
+<p style="margin-left: 20.0px">return (userLetter == 'y' || userLetter == 'N');</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>// Calculate the year the user was born based on their age,<br>
+// the current year, and whether they have had a birthday this year<br>
+int calcBirthYear(int age, int curYear, bool bDayPassed)</p>
+<p>{</p>
+<p style="margin-left: 20.0px">if (bDayPassed)</p>
+<p style="margin-left: 40.0px">return curYear - age;</p>
+<p style="margin-left: 20.0px">else</p>
+<p style="margin-left: 40.0px">return curYear - age - 1;</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>/* // Stubs</p>
+<p>int getInput(int min, int max)</p>
+<p>{</p>
+<p style="margin-left: 20.0px">return 0;</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>bool getYesNo()</p>
+<p>{</p>
+<p style="margin-left: 20.0px">return false;</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>int calcBirthYear(int age, int curYear, bool bDayPassed)</p>
+<p>{</p>
+<p style="margin-left: 20.0px">return 0;</p>
+<p>}</p>
+<p>*/</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!-- end content -->
+
+<!-- submit goes here -->
+
+<br><p class="top"><span id="navOpenCloseBottom"></span><a href="StubsAndDrivers_toc.html" title="Table of Contents">toc</a> | <a href="#">return to top</a> | <a href="StubsAndDrivers4.html">previous page</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="footer">
+<p>
+Content &#169;2010. All Rights Reserved.<br>
+Date last modified: November 20, 2010.<br>
+Written By Brian Bird<br>
+<a class="textpopper" href="javascript:void(0);" onmouseover="return overlib('<div style=\'text-align:center;\'>LessonBuilder 6.04.04</div>', PADX, 3, 3, PADY, 3, 3, BORDER, 1, BGCOLOR, '#000000', FGCOLOR, '#ffffff', WIDTH, 70, TEXTSIZE, 1);" onmouseout="nd();"><img src="spacer.gif" border="0" width="200" height="6"></a></p>
+</div>
+
+<p>&nbsp;</p>
+
+</div>
+
+<script type="text/javascript">
+<!--
+	if (parent.parent.document.getElementById("SCLBCourseIndexPage")) {
+
+		var toggLink = document.getElementById("navOpenCloseTop");
+		if (toggLink != null)
+			toggLink.innerHTML = '<a href="javascript:parent.parent.toggleFrame()"><img src="../navClose_custom.png" name="open_nav" alt="Open/Close Course Navigation" border="0"></a>';
+
+		toggLink = document.getElementById("navOpenCloseBottom");
+		if (toggLink != null)
+			toggLink.innerHTML = '<a href="javascript:parent.parent.toggleFrame()" title="Open/Close Course Navigation">navigation</a> | ';
+	}
+-->
+</script>
+
+</body>
+</html>

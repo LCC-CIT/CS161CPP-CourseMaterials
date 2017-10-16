@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" dir="ltr">
+<head>
+<!-- This file is created by SoftChalk LessonBuilder -->
+<!-- LessonBuilder Version 6.04.04 -->
+<title>Overview</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="SoftChalk LessonBuilder 6.04.04">
+<script type="text/javascript">var passing_score = 0;</script>
+<script type="text/javascript">var lessonID = 1290120435706;</script>
+<link href="StubsAndDrivers.css" rel="stylesheet" type="text/css">
+<link href="StubsAndDrivers_print.css" rel="stylesheet" type="text/css" media="print">
+<script src="sclb_extras/overlibmws/overlibmws.js" type="text/javascript"></script>
+<script src="sclb_extras/overlibmws/overlibmws_shadow.js" type="text/javascript"></script>
+<script type="text/javascript">OLbubbleImageDir = "./sclb_extras/overlibmws/";</script>
+<script src="sclb_extras/overlibmws/overlibmws_bubble.js" type="text/javascript"></script>
+<script src="sclb_extras/flashobject.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+	var scoreQa = new Array();
+	var score_a = new Array();
+	var q_done_a = new Array();
+	var show_restart_a = new Array();
+	var actOrder = new Array();
+//-->
+</script>
+<script type="text/javascript">
+<!--
+	var q_item = 0;
+	var scoreQ = new Array();
+	var q_done = new Array();
+	var qOrder = new Array();
+	scorm_completed_status = true;
+//-->
+</script>
+<script type="text/javascript">
+<!--
+	if (parent.parent.document.getElementById("SCLBCourseIndexPage")) {
+		var myLoc = location.href;
+		var myLoc_array = myLoc.split("/");
+		mySplit = myLoc_array[myLoc_array.length - 2] + myLoc_array[myLoc_array.length - 1];
+		mySplit_cut = mySplit.substring(0, mySplit.length - 5);
+		parent.parent.file_name = mySplit_cut;
+		myImage = eval("parent.parent.nav.document." + parent.parent.file_name);
+		myImage.src = "arrow.png";
+
+		if (parent.parent.previous_page) {
+			loc_old = parent.parent.previous_page;
+			myImage_old = eval("parent.parent.nav.document." + loc_old);
+			myImage_old.src = "check.png";
+			parent.parent.previous_page = parent.parent.file_name;
+		}
+		if (!parent.parent.previous_page) {
+			parent.parent.previous_page = parent.parent.file_name;
+		}
+	}
+//-->
+</script>
+<style type="text/css">
+#navOpenCloseTop {
+	float: left;
+	margin: 2px;
+}
+</style>
+<style type="text/css">
+.hide_stuff {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+</style>
+<!-- endscID -->
+</head>
+
+<body>
+<div id=div45dfWo9jkDyQp5jZd style="position: absolute; visibility: hidden; z-index: 1001;"></div>
+<div id=ds45dfWo9jkDyQp5jZd style="position:absolute; visibility:hidden; z-index:1007;"></div>
+<div id="banner">
+<h1>Stubs & Drivers</h1>
+<h2>A technique to simplify degugging</h2>
+
+<div id="nav">
+<div id="printall"><a href="StubsAndDrivers_print.html" target="_blank">print all</a></div>
+<span id="navOpenCloseTop"></span>
+<div style="margin: 0; padding: 0;"><a href="#endofnav"><img title="skip navigation" src="spacer.gif" border="0" width="0" height="0"></a></div>
+<div id="navindent">
+
+<ul>
+<li><a href="StubsAndDrivers_toc.html" title="Table of Contents">&nbsp;&nbsp;Contents&nbsp;&nbsp;</a></li>
+<li><strong>&nbsp;&nbsp;Page:</strong></li>
+<li><span class="yourhere">&nbsp;&nbsp;1&nbsp;&nbsp;</span></li>
+<li> | <a href="StubsAndDrivers2.html" title="Example">&nbsp;&nbsp;2&nbsp;&nbsp;</a></li>
+<li> | <a href="StubsAndDrivers3.html" title="Example (continued)">&nbsp;&nbsp;3&nbsp;&nbsp;</a></li>
+<li> | <a href="StubsAndDrivers4.html" title="Example (continued)">&nbsp;&nbsp;4&nbsp;&nbsp;</a></li>
+<li> | <a href="StubsAndDrivers5.html" title="Example (continued)">&nbsp;&nbsp;5&nbsp;&nbsp;</a></li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="endofnav"></div>
+
+<div id="content2">
+<!-- start content -->
+
+<a name="overview"></a><h1>Overview</h1>
+<p>The use of stubs and drivers is a software engineering methodology that facilitates faster development of a working program.</p>
+<a name="stubs"></a><h2>Stubs</h2>
+<p>Stubs are just skeletal functions that only have a header and an empty function body like the one below:</p>
+<p style="margin-left: 40.0px"><font face="Courier New">int wholeDiv(float dividend, int divisor)<br>
+{</font></p>
+<p style="margin-left: 60.0px"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 40.0px"><font face="Courier New">}</font></p>
+<p>You use stubs to speed up your software deveolpment by writing just the stubs of all your functions before you write any of the code that goes inside the functions. Once you have written all the stubs (includeing a stub main) you can compile just the stubs to see if you have any syntax errors. By checking for syntax errors in just the stubs you will be able to quickly fix any problems. Now you know you have a syntactically correct starting point for your program.</p>
+<a name="drivers"></a><h2>Drivers</h2>
+<p>Drivers are short blocks of temporary test code that you write in your program's main so you can test your functions. Here is an example:</p>
+<p style="margin-left: 40.0px"><font face="Courier New">int main()</font><br>
+<font face="Courier New">{</font></p>
+<p style="margin-left: 60.0px"><font face="Courier New">// Test driver for wholeDiv.</font><br>
+<font face="Courier New">cout &lt;&lt; &quot;8 / 3 should be 2: &quot; &lt;&lt; wholeDiv(8, 3) &lt;&lt; endl;</font><br>
+<font face="Courier New">cout &lt;&lt; &quot;1 / 0 should produce an error message: &quot; &lt;&lt; wholeDiv(1, 0) &lt;&lt; endl;</font><br>
+<font face="Courier New">cout &lt;&lt; &quot;0 / 1 should be 0: &quot; &lt;&lt; wholeDiv(0, 1) &lt;&lt; endl;</font></p>
+<p style="margin-left: 60.0px"><font face="Courier New">return 0;</font></p>
+<p style="margin-left: 60.0px"><font face="Courier New">}</font></p>
+<a name="usingdriverstotestfunctions"></a><h2>Using drivers to test functions</h2>
+<p>You use drivers to test each stub before you add code to it. It should fail since it's an empty stub. Then as you add code to flesh out your stub you test the function again and debug it as needed until you have a working function as shown below:</p>
+<p style="margin-left: 40.0px"><font face="Courier New">int wholeDiv(float dividend, int divisor)<br>
+{</font></p>
+<p style="margin-left: 60.0px"><font face="Courier New">if(divisor == 0)</font><br>
+<font face="Courier New">{</font></p>
+<p style="margin-left: 80.0px"><font face="Courier New">cout &lt;&lt; &quot;Error! Division by zero.&quot; &lt;&lt; endl;</font><br>
+<font face="Courier New">return 0;</font></p>
+<p style="margin-left: 60.0px"><font face="Courier New">}</font><br>
+<font face="Courier New">else</font></p>
+<p style="margin-left: 80.0px"><font face="Courier New">return dividend / divisor;</font></p>
+<p style="margin-left: 60.0px"><font face="Courier New">}</font></p>
+<p>&nbsp;</p>
+<!-- end content -->
+
+<!-- submit goes here -->
+
+<br><p class="top"><span id="navOpenCloseBottom"></span><a href="StubsAndDrivers_toc.html" title="Table of Contents">toc</a> | <a href="#">return to top</a> | <a href="StubsAndDrivers2.html">next page</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="footer">
+<p>
+Content &#169;2010. All Rights Reserved.<br>
+Date last modified: November 20, 2010.<br>
+Written By Brian Bird<br>
+<a class="textpopper" href="javascript:void(0);" onmouseover="return overlib('<div style=\'text-align:center;\'>LessonBuilder 6.04.04</div>', PADX, 3, 3, PADY, 3, 3, BORDER, 1, BGCOLOR, '#000000', FGCOLOR, '#ffffff', WIDTH, 70, TEXTSIZE, 1);" onmouseout="nd();"><img src="spacer.gif" border="0" width="200" height="6"></a></p>
+</div>
+
+<p>&nbsp;</p>
+
+</div>
+
+<script type="text/javascript">
+<!--
+	if (parent.parent.document.getElementById("SCLBCourseIndexPage")) {
+
+		var toggLink = document.getElementById("navOpenCloseTop");
+		if (toggLink != null)
+			toggLink.innerHTML = '<a href="javascript:parent.parent.toggleFrame()"><img src="../navClose_custom.png" name="open_nav" alt="Open/Close Course Navigation" border="0"></a>';
+
+		toggLink = document.getElementById("navOpenCloseBottom");
+		if (toggLink != null)
+			toggLink.innerHTML = '<a href="javascript:parent.parent.toggleFrame()" title="Open/Close Course Navigation">navigation</a> | ';
+	}
+-->
+</script>
+
+</body>
+</html>

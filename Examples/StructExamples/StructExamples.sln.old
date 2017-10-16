@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StructExamples", "StructExamples\StructExamples.vcproj", "{F0637529-763F-411C-A9BA-64ADA2FB639D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Multi-fileStuctExamples", "Multi-fileStuctExamples\Multi-fileStuctExamples.vcproj", "{DD142FD9-29D7-46A0-8CBB-C716F3BA12E6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StructInitialization", "StructInitialization\StructInitialization.vcproj", "{A9776EC5-395B-48D1-AF41-E63ED94B32AA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StructAsArg", "StructAsArg\StructAsArg.vcproj", "{30F6226F-266D-48D8-A5F0-D864BED17049}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0637529-763F-411C-A9BA-64ADA2FB639D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F0637529-763F-411C-A9BA-64ADA2FB639D}.Debug|Win32.Build.0 = Debug|Win32
+		{F0637529-763F-411C-A9BA-64ADA2FB639D}.Release|Win32.ActiveCfg = Release|Win32
+		{F0637529-763F-411C-A9BA-64ADA2FB639D}.Release|Win32.Build.0 = Release|Win32
+		{DD142FD9-29D7-46A0-8CBB-C716F3BA12E6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD142FD9-29D7-46A0-8CBB-C716F3BA12E6}.Debug|Win32.Build.0 = Debug|Win32
+		{DD142FD9-29D7-46A0-8CBB-C716F3BA12E6}.Release|Win32.ActiveCfg = Release|Win32
+		{DD142FD9-29D7-46A0-8CBB-C716F3BA12E6}.Release|Win32.Build.0 = Release|Win32
+		{A9776EC5-395B-48D1-AF41-E63ED94B32AA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A9776EC5-395B-48D1-AF41-E63ED94B32AA}.Debug|Win32.Build.0 = Debug|Win32
+		{A9776EC5-395B-48D1-AF41-E63ED94B32AA}.Release|Win32.ActiveCfg = Release|Win32
+		{A9776EC5-395B-48D1-AF41-E63ED94B32AA}.Release|Win32.Build.0 = Release|Win32
+		{30F6226F-266D-48D8-A5F0-D864BED17049}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30F6226F-266D-48D8-A5F0-D864BED17049}.Debug|Win32.Build.0 = Debug|Win32
+		{30F6226F-266D-48D8-A5F0-D864BED17049}.Release|Win32.ActiveCfg = Release|Win32
+		{30F6226F-266D-48D8-A5F0-D864BED17049}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
